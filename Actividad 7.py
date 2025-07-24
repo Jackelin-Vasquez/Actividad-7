@@ -11,6 +11,21 @@ def menu():
 def sub_menu1():
     print("1.Suma total.\n2.Promedio.\n3.Cantidad de positivos, negativos y ceros.\n4.Cuantos son multiplos de 3.")
 
+def opcion_uno():
+    cantidad=int(input("Ingrese cantidad de números:"))
+
+    suma=0
+    lista_numeros=[]
+    cantidad_num=0
+
+    for i in range(cantidad):
+        numero= int(input(f"Ingrese numero {i+1}"))
+        suma += numero
+        lista_numeros.append(numero)
+        cantidad_num +=1
+
+
+
 def menu_opcion4():
     print("1.Cuantas son mayores  o iguales a 85.\n2.Cuantas estan en zona de riesgo(menor a 60.")
 
