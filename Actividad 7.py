@@ -28,6 +28,9 @@ def opcion_uno():
         lista_numeros.append(numero)
         cantidad_num +=1
 
+    for numero in lista_numeros:
+        if numero < 0:
+            negativo +=1
         if numero < 0:
             negativo +=1
         if numero >0:
@@ -40,6 +43,12 @@ def opcion_uno():
 
 def promedio(suma, cantidad_num):
         return suma / cantidad_num
+
+def calcular_area(base,altura):
+    return base*altura
+
+def calcular_perimetro(base,altura):
+    return(2*base) + (2*altura)
 
 def menu_opcion4():
     print("1.Cuantas son mayores  o iguales a 85.\n2.Cuantas estan en zona de riesgo(menor a 60.")
@@ -66,10 +75,16 @@ while True:
                     case "3":
                          print(f"hay {resultado[3]} negativos, {resultado[4]} positivos y {resultado[5]} numeros que son ceros.")
                     case "4":
-                        print(f"hay{resultado[6]} numeros que son multiplos de 4.")
+                        print(f"hay{resultado[6]} numero/s que son multiplo/s de 4.")
                     case "5":
                         print("Saliendo del menú...")
                         break
                     case _:
                         print("Opcion no valida...")
+        case "2":
+            base= float(input("Ingrese longitud de base:"))
+            altura= float(input("Ingrese altura:"))
+            print(f"El area del rectangulo es:{calcular_area(base,altura)}")
+            print(f"El perimetro del rectangulo es:{calcular_perimetro(base,altura)}")
+        case"3":
 
