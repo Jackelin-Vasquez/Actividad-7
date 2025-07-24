@@ -19,9 +19,7 @@ def opcion_uno():
     cantidad_num=0
     negativo=0
     positivo=0
-
-    def promedio(suma, cantidad_num):
-        return suma / cantidad_num
+    ceros=0
 
     for i in range(cantidad):
         numero= int(input(f"Ingrese numero {i+1}"))
@@ -31,8 +29,11 @@ def opcion_uno():
 
         if numero < 0:
             negativo +=1
-        else:
+        if número >0:
             positivo +=1
+        if numero ==0:
+            ceros+=1
+
 
 
 
@@ -42,3 +43,6 @@ def menu_opcion4():
 def menu_opcion5():
     print("1.El númeor mayor.\n2.El número menor.\n3.Cuantos se repiten")
 
+while True:
+    menu()
+    opcion=input("Seleccione una opcion:")
