@@ -9,7 +9,7 @@ def menu():
     print("7.Salir del programa")
 
 def sub_menu1():
-    print("1.Suma total.\n2.Promedio.\n3.Cantidad de positivos, negativos y ceros.\n4.Cuantos son multiplos de 3.")
+    print("1.Suma total.\n2.Promedio.\n3.Cantidad de positivos, negativos y ceros.\n4.Cuantos son multiplos de 3.\n5.Slir del menú")
 
 def opcion_uno():
     cantidad=int(input("Ingrese cantidad de números:"))
@@ -54,12 +54,22 @@ while True:
     match opcion:
         case "1":
             resultado = opcion_uno()
+            while True:
             print("---MENÚ---")
             sub_menu1()
-            sub_opcion=input("Seleccione una opcion:")
-            while True:
-                match sub_opcion:
-                    case "1":
-                        print(f"La suma de los número es:{resultado[0]}")
-                    case "2":
-                        print(f"El promedio es:{promedio(resultado[0],resultado[2])}")
+            sub_opcion= input("Seleccione una opcion:")
+            match sub_opcion:
+                case "1":
+                     print(f"La suma de los número es:{resultado[0]}")
+                case "2":
+                    print(f"El promedio es:{promedio(resultado[0],resultado[2])}")
+                case "3":
+                     print(f"hay {resultado[3]} negativos, {resultado[4]} positivos y {resultado[5]} numeros que son ceros.")
+                case "4":
+                    print(f"hay{resultado[6]} numeros que son multiplos de 4.")
+                case "5":
+                    print("Saliendo del menú...")
+                    break
+                case _:
+                    print("Opcion no valida...")
+
