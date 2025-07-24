@@ -50,6 +50,17 @@ def calcular_area(base,altura):
 def calcular_perimetro(base,altura):
     return(2*base) + (2*altura)
 
+def calcular_primo(num):
+    if num <=1:
+        return False
+    elif num ==2:
+        return False
+    else:
+        for i in range(2,num)
+            if i %2==0:
+                return False
+        return True
+
 def menu_opcion4():
     print("1.Cuantas son mayores  o iguales a 85.\n2.Cuantas estan en zona de riesgo(menor a 60.")
 
