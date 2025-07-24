@@ -28,27 +28,27 @@ def opcion_uno():
         lista_numeros.append(numero)
         cantidad_num +=1
 
-    for numero in lista_numeros:
-        if numero < 0:
+    for numeros in lista_numeros:
+        if numeros < 0:
             negativo +=1
-        if numero < 0:
+        if numeros < 0:
             negativo +=1
-        if numero >0:
+        if numeros >0:
             positivo +=1
-        if numero ==0:
+        if numeros ==0:
             ceros+=1
-        if numero %4==0:
+        if numeros %4==0:
             multiplo_cuatro+=1
     return suma,lista_numeros,cantidad_num,negativo,positivo,ceros,multiplo_cuatro
 
 def promedio(suma, cantidad_num):
         return suma / cantidad_num
 
-def calcular_area(base,altura):
-    return base*altura
+def calcular_area(base1,altura1):
+    return base1*altura1
 
-def calcular_perimetro(base,altura):
-    return(2*base) + (2*altura)
+def calcular_perimetro(base2,altura2):
+    return(2*base2) + (2*altura2)
 
 def calcular_primo(num):
     if num <=1:
@@ -61,23 +61,20 @@ def calcular_primo(num):
                 return False
         return True
 
-def menu_opcion4():
-    print("1.Cuantas son mayores  o iguales a 85.\n2.Cuantas estan en zona de riesgo(menor a 60.")
-
- def opcion4():
+def opcion4():
      cantidad= int(input("Ingrese cantidad de calificaciones a ingresar:"))
      mayor_igual_85=0
      menor_60=0
      suma=0
 
      for i in range(cantidad):
-         calificacion= float(input(f"Ingrese calificacion no.{i+a}"))
+         calificacion= float(input(f"Ingrese calificacion no.{i+1}"))
          suma+=calificacion
          if calificacion >=85:
-             mayor_igual_85+= 1
-        if calificacion < 60:
+             mayor_igual_85 += 1
+         if calificacion < 60:
             menor_60+=1
-        return cantidad,mayor_igual_85,menor_60,suma
+     return cantidad, mayor_igual_85, menor_60, suma
 
 def menu_opcion5():
     print("1.El númeor mayor.\n2.El número menor.\n3.Cuantos se repiten")
@@ -120,6 +117,9 @@ while True:
             else:
                 print(f"{numero} es primo")
         case "4":
-
+            opcion4()
+            resultado4= opcion4()
+            print(f"El promedio de notas es: {promedio(resultado4[3],resultado4[0])}")
+            print(f"Hay {resultado4[1]} nota/s que son mayor/es que 85\n Hay {resultado4[2]} nota/s que estan en zona de riesgo (menor qeu 60)")
 
 
