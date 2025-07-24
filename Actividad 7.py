@@ -20,6 +20,7 @@ def opcion_uno():
     negativo=0
     positivo=0
     ceros=0
+    multiplo_cuatro=1
 
     for i in range(cantidad):
         numero= int(input(f"Ingrese numero {i+1}"))
@@ -29,13 +30,16 @@ def opcion_uno():
 
         if numero < 0:
             negativo +=1
-        if número >0:
+        if numero >0:
             positivo +=1
         if numero ==0:
             ceros+=1
+        if numero %4==0:
+            multiplo_cuatro+=1
+    return suma,lista_numeros,cantidad_num,negativo,positivo,ceros,multiplo_cuatro
 
-
-
+def promedio(suma, cantidad_num):
+        return suma / cantidad_num
 
 def menu_opcion4():
     print("1.Cuantas son mayores  o iguales a 85.\n2.Cuantas estan en zona de riesgo(menor a 60.")
@@ -46,3 +50,16 @@ def menu_opcion5():
 while True:
     menu()
     opcion=input("Seleccione una opcion:")
+
+    match opcion:
+        case "1":
+            resultado = opcion_uno()
+            print("---MENÚ---")
+            sub_menu1()
+            sub_opcion=input("Seleccione una opcion:")
+            while True:
+                match sub_opcion:
+                    case "1":
+                        print(f"La suma de los número es:{resultado[0]}")
+                    case "2":
+                        print(f"El promedio es:{promedio(resultado[0],resultado[2])}")
