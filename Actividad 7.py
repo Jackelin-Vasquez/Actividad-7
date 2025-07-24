@@ -75,6 +75,24 @@ def opcion4():
          if calificacion < 60:
             menor_60+=1
      return cantidad, mayor_igual_85, menor_60, suma
+def encontrar_mayor_menor():
+    cantidad=int(input("Ingrese cantidad de números a agregar:"))
+    numeros=[]
+
+    for x in range(cantidad):
+        while True:
+            numero1=int(input(f"Ingrese número {x +1}"))
+            numeros.append(numero1)
+    mayor= numeros[0]
+    menor=numeros[0]
+
+    for num in numeros[-1]:
+        if num > mayor:
+            mayor= num
+        if num < menor:
+            menor =num
+    return mayor, menor
+
 
 def menu_opcion5():
     print("1.El númeor mayor.\n2.El número menor.\n3.Cuantos se repiten")
