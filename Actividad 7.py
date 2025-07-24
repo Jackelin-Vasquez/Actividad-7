@@ -78,24 +78,26 @@ def opcion4():
 def encontrar_mayor_menor():
     cantidad=int(input("Ingrese cantidad de números a agregar:"))
     numeros=[]
+    num_repetir=0
 
     for x in range(cantidad):
         while True:
             numero1=int(input(f"Ingrese número {x +1}"))
             numeros.append(numero1)
+            break
     mayor= numeros[0]
     menor=numeros[0]
+    repetido= numeros[0]
 
-    for num in numeros[-1]:
+    for num in numeros[1:]:
         if num > mayor:
             mayor= num
         if num < menor:
             menor =num
-    return mayor, menor
+        if num == repetido:
+            num_repetir +=1
+    return mayor, menor, num_repetir
 
-
-def menu_opcion5():
-    print("1.El númeor mayor.\n2.El número menor.\n3.Cuantos se repiten")
 
 while True:
     menu()
@@ -139,5 +141,10 @@ while True:
             resultado4= opcion4()
             print(f"El promedio de notas es: {promedio(resultado4[3],resultado4[0])}")
             print(f"Hay {resultado4[1]} nota/s que son mayor/es que 85\n Hay {resultado4[2]} nota/s que estan en zona de riesgo (menor qeu 60)")
+
+        case "5":
+            resultado= encontrar_mayor_menor()
+            print(f"El número mayor es{resultado[0]} y el número menor es {resultado[1]} y se repiten {resultado[3]}")
+
 
 
