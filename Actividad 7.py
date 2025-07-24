@@ -98,6 +98,16 @@ def encontrar_mayor_menor():
             num_repetir +=1
     return mayor, menor, num_repetir
 
+def suma(num1,num2):
+    return num1 + num2
+def resta(num1,num2):
+    return num1-num2
+def multiplicacion(num1,num2):
+    return num1*num2
+def division(num1,num2):
+    return num1/num2
+
+
 
 while True:
     menu()
@@ -144,7 +154,7 @@ while True:
 
         case "5":
             resultado= encontrar_mayor_menor()
-            print(f"El número mayor es{resultado[0]} y el número menor es {resultado[1]} y se repiten {resultado[3]}")
+            print(f"El número mayor es{resultado[0]}, el número menor es {resultado[1]} y se repiten {resultado[2]}")
 
 
 
