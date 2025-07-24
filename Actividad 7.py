@@ -64,6 +64,21 @@ def calcular_primo(num):
 def menu_opcion4():
     print("1.Cuantas son mayores  o iguales a 85.\n2.Cuantas estan en zona de riesgo(menor a 60.")
 
+ def opcion4():
+     cantidad= int(input("Ingrese cantidad de calificaciones a ingresar:"))
+     mayor_igual_85=0
+     menor_60=0
+     suma=0
+
+     for i in range(cantidad):
+         calificacion= float(input(f"Ingrese calificacion no.{i+a}"))
+         suma+=calificacion
+         if calificacion >=85:
+             mayor_igual_85+= 1
+        if calificacion < 60:
+            menor_60+=1
+        return cantidad,mayor_igual_85,menor_60,suma
+
 def menu_opcion5():
     print("1.El númeor mayor.\n2.El número menor.\n3.Cuantos se repiten")
 
@@ -104,5 +119,7 @@ while True:
                 print(f"{numero} no es primo")
             else:
                 print(f"{numero} es primo")
+        case "4":
+
 
 
