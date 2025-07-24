@@ -17,12 +17,22 @@ def opcion_uno():
     suma=0
     lista_numeros=[]
     cantidad_num=0
+    negativo=0
+    positivo=0
+
+    def promedio(suma, cantidad_num):
+        return suma / cantidad_num
 
     for i in range(cantidad):
         numero= int(input(f"Ingrese numero {i+1}"))
         suma += numero
         lista_numeros.append(numero)
         cantidad_num +=1
+
+        if numero < 0:
+            negativo +=1
+        else:
+            positivo +=1
 
 
 
