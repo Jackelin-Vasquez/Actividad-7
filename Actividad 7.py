@@ -56,7 +56,7 @@ def calcular_primo(num):
     elif num ==2:
         return False
     else:
-        for i in range(2,num)
+        for i in range(2,num):
             if i %2==0:
                 return False
         return True
@@ -98,4 +98,11 @@ while True:
             print(f"El area del rectangulo es:{calcular_area(base,altura)}")
             print(f"El perimetro del rectangulo es:{calcular_perimetro(base,altura)}")
         case"3":
+            numero= int(input("Ingrese número:"))
+            primo= calcular_primo(numero)
+            if primo:
+                print(f"{numero} no es primo")
+            else:
+                print(f"{numero} es primo")
+
 
