@@ -162,10 +162,18 @@ while True:
             numero_2= float(input("Ingrese número 2:"))
             while True:
                 menu_calculadora()
-                ocpion6= input("Ingrese una opcion:")
-                match
+                opcion6= input("Ingrese una opcion:")
 
-            print(f"La suma de los números es:\n {suma(numero_1,numero_2)}")
-            print(f"La resta de los número es:{resta(numero_1,numero_2)}")
-            print(f"la multiplicación de los números es: {multiplicacion(numero_1,numero_2)}")
-            print(f"")
+                match opcion6:
+                    case "1":
+                        print(f"La suma de los números es:\n {suma(numero_1,numero_2)}")
+                    case "2":
+                        print(f"La resta de los número es:{resta(numero_1,numero_2)}")
+                    case "3":
+                        print(f"la multiplicación de los números es: {multiplicacion(numero_1,numero_2)}")
+                    case "4":
+                        print(f"La división de los números es:{division(numero_1,numero_2)}")
+        case "7":
+            print("Saliendo del programa....")
+        case _:
+            print("Opción no valida...")
