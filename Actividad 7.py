@@ -24,9 +24,12 @@ def opcion_uno():
 
     for i in range(cantidad):
         numero= int(input(f"Ingrese numero {i+1}"))
-        suma += numero
-        lista_numeros.append(numero)
-        cantidad_num +=1
+        if numero < 0:
+            print("Ingrese un número positivo")
+        else:
+            suma += numero
+            lista_numeros.append(numero)
+            cantidad_num +=1
 
     for numeros in lista_numeros:
         if numeros < 0:
@@ -69,11 +72,14 @@ def opcion4():
 
      for i in range(cantidad):
          calificacion= float(input(f"Ingrese calificacion no.{i+1}"))
-         suma+=calificacion
-         if calificacion >=85:
-             mayor_igual_85 += 1
-         if calificacion < 60:
-            menor_60+=1
+         if calificacion < 0 or calificacion > 100:
+             print("Califacacion no valida")
+         else:
+             suma+=calificacion
+             if calificacion >=85:
+                 mayor_igual_85 += 1
+             if calificacion < 60:
+                menor_60+=1
      return cantidad, mayor_igual_85, menor_60, suma
 def encontrar_mayor_menor():
     cantidad=int(input("Ingrese cantidad de números a agregar:"))
