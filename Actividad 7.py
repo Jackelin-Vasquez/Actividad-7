@@ -15,7 +15,7 @@ def opcion_uno():
     negativo=0
     positivo=0
     ceros=0
-    multiplo_cuatro=0
+    multiplo_tres=0
 
     for i in range(cantidad):
         numero= int(input(f"Ingrese numero {i+1}"))
@@ -33,9 +33,9 @@ def opcion_uno():
             positivo +=1
         if numeros ==0:
             ceros+=1
-        if numeros %4==0:
-            multiplo_cuatro+=1
-    return suma,lista_numeros,cantidad_num,negativo,positivo,ceros,multiplo_cuatro
+        if numeros %3==0:
+            multiplo_tres+=1
+    return suma,lista_numeros,cantidad_num,negativo,positivo,ceros,multiplo_tres
 
 def promedio(suma, cantidad_num):
         return suma / cantidad_num
@@ -133,7 +133,7 @@ while True:
                     case "3":
                          print(f"hay {resultado[3]} negativos, {resultado[4]} positivos y {resultado[5]} numeros que son ceros.")
                     case "4":
-                        print(f"hay{resultado[6]} numero/s que son multiplo/s de 4.")
+                        print(f"hay{resultado[6]} numero/s que son multiplo/s de 3.")
                     case "5":
                         print("Saliendo del menú...")
                         break
