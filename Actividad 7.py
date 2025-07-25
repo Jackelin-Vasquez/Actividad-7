@@ -107,7 +107,8 @@ def multiplicacion(num1,num2):
 def division(num1,num2):
     return num1/num2
 
-
+def menu_calculadora():
+    print("1.Suma.\n2.Resta.\n3.Multiplicación\4.Division")
 
 while True:
     menu()
@@ -156,5 +157,15 @@ while True:
             resultado= encontrar_mayor_menor()
             print(f"El número mayor es{resultado[0]}, el número menor es {resultado[1]} y se repiten {resultado[2]}")
 
+        case "6":
+            numero_1= float(input("Ingrese numero 1"))
+            numero_2= float(input("Ingrese número 2:"))
+            while True:
+                menu_calculadora()
+                ocpion6= input("Ingrese una opcion:")
+                match
 
-
+            print(f"La suma de los números es:\n {suma(numero_1,numero_2)}")
+            print(f"La resta de los número es:{resta(numero_1,numero_2)}")
+            print(f"la multiplicación de los números es: {multiplicacion(numero_1,numero_2)}")
+            print(f"")
