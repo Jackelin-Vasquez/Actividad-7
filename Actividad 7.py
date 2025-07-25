@@ -6,36 +6,36 @@ def menu():
 def sub_menu1():
     print("1.Suma total.\n2.Promedio.\n3.Cantidad de positivos, negativos y ceros.\n4.Cuantos son multiplos de 3.\n5.Slir del menú")
 
-def opcion_uno():
-    cantidad=int(input("Ingrese cantidad de números:"))
+def pedir_numeros(cantidad):
+    numeros=[]
+    for in in range(cantidad):
+        num= int(input(f"Ingrese numero{i+1}"))
+        numeros.append(num)
+    return numeros
 
-    suma=0
-    lista_numeros=[]
-    cantidad_num=0
-    negativo=0
-    positivo=0
-    ceros=0
-    multiplo_tres=0
-
-    for i in range(cantidad):
-        numero= int(input(f"Ingrese numero {i+1}"))
-        if numero < 0:
-            print("Ingrese un número positivo")
-        else:
-            suma += numero
-            lista_numeros.append(numero)
-            cantidad_num +=1
-
-    for numeros in lista_numeros:
-        if numeros < 0:
+def sumar_lista():
+    suma= 0
+    for n in lista:
+        suma += n
+    return suma
+def contar_positivos_negativos(lista):
+    positivo= negativo = ceros =0
+    for n in lista:
+        if n < 0:
             negativo +=1
-        if numeros >0:
+        if n >0:
             positivo +=1
-        if numeros ==0:
+        if n==0:
             ceros+=1
-        if numeros %3==0:
-            multiplo_tres+=1
-    return suma,lista_numeros,cantidad_num,negativo,positivo,ceros,multiplo_tres
+    return suma,lista_numeros,cantidad_num,negativo,positivo,ceros
+
+def multiplo_tres(lista):
+   contador=0
+   for n in lista:
+       if n% 3==0:
+           contador +=1
+   return contador
+
 
 def promedio(suma, cantidad_num):
         return suma / cantidad_num
