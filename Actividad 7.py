@@ -38,7 +38,7 @@ def multiplo_tres(lista):
 
 def opcion_uno():
     cantidad= int(input("Cuantos numeros dese ingresar?"))
-    numeros= pedir_numeros()
+    numeros= pedir_numeros(cantidad)
     suma= sumar_lista(numeros)
     positivos, negativos, ceros = contar_positivos_negativos(numeros)
     multiplos_tres= multiplo_tres(numeros)
