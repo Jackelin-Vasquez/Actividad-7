@@ -34,8 +34,6 @@ def opcion_uno():
     for numeros in lista_numeros:
         if numeros < 0:
             negativo +=1
-        if numeros < 0:
-            negativo +=1
         if numeros >0:
             positivo +=1
         if numeros ==0:
@@ -160,7 +158,6 @@ while True:
             else:
                 print(f"{numero} no es primo")
         case "4":
-            opcion4()
             resultado4= opcion4()
             print(f"El promedio de notas es: {promedio(resultado4[3],resultado4[0])}")
             print(f"Hay {resultado4[1]} nota/s que son mayor/es que 85\n Hay {resultado4[2]} nota/s que estan en zona de riesgo (menor qeu 60)")
@@ -192,5 +189,6 @@ while True:
                         print("Opcion no valida")
         case "7":
             print("Saliendo del programa....")
+            break
         case _:
             print("Opción no valida...")
