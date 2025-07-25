@@ -13,7 +13,7 @@ def pedir_numeros(cantidad):
         numeros.append(num)
     return numeros
 
-def sumar_lista():
+def sumar_lista(lista):
     suma= 0
     for n in lista:
         suma += n
@@ -37,6 +37,7 @@ def multiplo_tres(lista):
    return contador
 
 def opcion_uno():
+    cantidad= int(input("Cuantos numeros dese ingresar?"))
     numeros= pedir_numeros()
     suma= sumar_lista(numeros)
     positivos, negativos, ceros = contar_positivos_negativos(numeros)
@@ -133,13 +134,13 @@ while True:
                 sub_opcion= input("Seleccione una opcion:")
                 match sub_opcion:
                     case "1":
-                         print(f"La suma de los número es:{resultado[0]}")
+                         print(f"La suma de los número es:{resultado[1]}")
                     case "2":
-                        print(f"El promedio es:{promedio(resultado[0],resultado[2])}")
+                        print(f"El promedio es:{promedio(resultado[1],len(resultado[0]))}")
                     case "3":
-                         print(f"hay {resultado[3]} negativos, {resultado[4]} positivos y {resultado[5]} numeros que son ceros.")
+                         print(f"hay {resultado[3]} negativos, {resultado[2]} positivos y {resultado[4]} numeros que son ceros.")
                     case "4":
-                        print(f"hay{resultado[6]} numero/s que son multiplo/s de 3.")
+                        print(f"hay{resultado[5]} numero/s que son multiplo/s de 3.")
                     case "5":
                         print("Saliendo del menú...")
                         break
