@@ -38,9 +38,11 @@ def multiplo_tres(lista):
 
 def opcion_uno():
     numeros= pedir_numeros()
-    suma= sumar_lista()
-    positivos, negativos, ceros = contar_positivos_negativos()
-    multiplos_tres= multiplo_tres()
+    suma= sumar_lista(numeros)
+    positivos, negativos, ceros = contar_positivos_negativos(numeros)
+    multiplos_tres= multiplo_tres(numeros)
+    return numeros, suma, positivos,negativos,ceros,multiplos_tres
+
 def promedio(suma, cantidad_num):
         return suma / cantidad_num
 
