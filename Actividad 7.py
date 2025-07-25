@@ -57,7 +57,7 @@ def calcular_primo(num):
     if num <=1:
         return False
     elif num ==2:
-        return False
+        return True
     else:
         for i in range(2,num):
             if i %2==0:
@@ -81,6 +81,7 @@ def opcion4():
              if calificacion < 60:
                 menor_60+=1
      return cantidad, mayor_igual_85, menor_60, suma
+
 def encontrar_mayor_menor():
     cantidad=int(input("Ingrese cantidad de números a agregar:"))
     numeros=[]
