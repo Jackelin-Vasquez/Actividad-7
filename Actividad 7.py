@@ -85,7 +85,8 @@ def opcion4():
 def encontrar_mayor_menor():
     cantidad=int(input("Ingrese cantidad de números a agregar:"))
     numeros=[]
-    num_repetir=0
+    repetidos=[]
+    num_rep=[]
 
     for x in range(cantidad):
         while True:
@@ -94,16 +95,20 @@ def encontrar_mayor_menor():
             break
     mayor= numeros[0]
     menor=numeros[0]
-    repetido= numeros[0]
 
     for num in numeros[1:]:
         if num > mayor:
             mayor= num
         if num < menor:
             menor =num
-        if num == repetido:
-            num_repetir +=1
-    return mayor, menor, num_repetir
+
+    for n in numeros:
+        if n not in num_rep:
+            num_rep.append(n)
+        else:
+            repetidos.append((n))
+
+    return mayor, menor, repetidos
 
 def suma(num1,num2):
     return num1 + num2
@@ -151,9 +156,9 @@ while True:
             numero= int(input("Ingrese número:"))
             primo= calcular_primo(numero)
             if primo:
-                print(f"{numero} no es primo")
+                print(f"{numero}  es primo")
             else:
-                print(f"{numero} es primo")
+                print(f"{numero} no es primo")
         case "4":
             opcion4()
             resultado4= opcion4()
