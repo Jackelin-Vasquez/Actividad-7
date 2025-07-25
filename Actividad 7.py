@@ -19,7 +19,9 @@ def sumar_lista(lista):
         suma += n
     return suma
 def contar_positivos_negativos(lista):
-    positivo= negativo = ceros =0
+    positivo= 0
+    negativo = 0
+    ceros =0
     for n in lista:
         if n < 0:
             negativo +=1
