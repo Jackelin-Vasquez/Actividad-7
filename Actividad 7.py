@@ -1,12 +1,7 @@
-
 def menu():
-    print("1.Ingresar una lista de n números reales y mostrar.")
-    print("2.Calcular el area y perimetro de un rectangulo.")
-    print("3.Vereficar si un número es primo")
-    print("4.Calcular el promedio de calificaciones")
-    print("5.Ingresar una lista.")
-    print("6.Simular una calculadora de operaiones")
-    print("7.Salir del programa")
+    print("1.Ingresar una lista de n números reales y mostrar.\n2.Calcular el area y perimetro de un rectangulo.")
+    print("3.Vereficar si un número es primo.\n4.Calcular el promedio de calificaciones")
+    print("5.Ingresar una lista.\n6.Simular una calculadora de operaiones\n7.Salir del programa")
 
 def sub_menu1():
     print("1.Suma total.\n2.Promedio.\n3.Cantidad de positivos, negativos y ceros.\n4.Cuantos son multiplos de 3.\n5.Slir del menú")
@@ -91,8 +86,7 @@ def encontrar_mayor_menor():
             numero1=int(input(f"Ingrese número {x +1}"))
             numeros.append(numero1)
             break
-    mayor= numeros[0]
-    menor=numeros[0]
+    mayor= menor =numeros[0]
 
     for num in numeros[1:]:
         if num > mayor:
