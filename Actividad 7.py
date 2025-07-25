@@ -20,7 +20,7 @@ def opcion_uno():
     negativo=0
     positivo=0
     ceros=0
-    multiplo_cuatro=1
+    multiplo_cuatro=0
 
     for i in range(cantidad):
         numero= int(input(f"Ingrese numero {i+1}"))
@@ -115,7 +115,7 @@ def division(num1,num2):
     return num1/num2
 
 def menu_calculadora():
-    print("1.Suma.\n2.Resta.\n3.Multiplicación\4.Division")
+    print("1.Suma.\n2.Resta.\n3.Multiplicación\n4.Division\n5.Salir")
 
 while True:
     menu()
@@ -180,6 +180,11 @@ while True:
                         print(f"la multiplicación de los números es: {multiplicacion(numero_1,numero_2)}")
                     case "4":
                         print(f"La división de los números es:{division(numero_1,numero_2)}")
+                    case "5":
+                        print("Saliendo...")
+                        break
+                    case _:
+                        print("Opcion no valida")
         case "7":
             print("Saliendo del programa....")
         case _:
