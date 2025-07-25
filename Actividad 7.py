@@ -8,7 +8,7 @@ def sub_menu1():
 
 def pedir_numeros(cantidad):
     numeros=[]
-    for in in range(cantidad):
+    for i in range(cantidad):
         num= int(input(f"Ingrese numero{i+1}"))
         numeros.append(num)
     return numeros
@@ -27,7 +27,7 @@ def contar_positivos_negativos(lista):
             positivo +=1
         if n==0:
             ceros+=1
-    return suma,lista_numeros,cantidad_num,negativo,positivo,ceros
+    return negativo,positivo,ceros
 
 def multiplo_tres(lista):
    contador=0
